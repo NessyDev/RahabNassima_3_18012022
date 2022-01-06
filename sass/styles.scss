@@ -1,0 +1,917 @@
+// variables
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+$button-color: linear-gradient(354deg, $primary 0%, $secondary 100%);
+
+
+
+
+
+
+
+
+
+//all
+
+body{
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+//loader
+
+.loadingPage{
+    -webkit-animation: loadingPage 3s forwards;
+            animation: loadingPage 3s forwards;
+   
+}
+
+@-webkit-keyframes loadingPage{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes loadingPage{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.section{
+    background-color: rgba(255, 255, 255, 0.9);
+    height: auto;
+    width: auto;
+    top: 50%;
+    right: 50%;
+    // cursor : wait;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Shrikhand";
+    position: fixed;
+    z-index: 1;
+    -webkit-animation: loading 3s forwards;
+            animation: loading 3s forwards;
+    
+    
+
+    
+    // & .load1{
+    //     color: $primary;
+    // }
+    // & .load2{
+    //     color: $secondary;
+    // }
+    // & .load3{
+    //     color: $tertiary;
+    // }
+    
+
+    & .loader{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        border-radius: 50px;
+        border: 3px solid transparent;
+        border-top-color: $primary;
+        vertical-align: middle;
+        
+        -webkit-animation: spin .8s linear  infinite;
+                animation: spin .8s linear  infinite;
+        // -webkit-animation-delay: 2s;
+        //         animation-delay: 2s;
+        
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50px;
+            border: 3px solid transparent;
+            border-top-color: $secondary;
+            -webkit-animation: spin 10s linear  infinite;
+                    animation: spin 10s linear  infinite;
+            // -webkit-animation-delay: 1s;
+            //         animation-delay: 1s;
+    
+        }
+    
+        &:before{
+            content: " ";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            border-radius: 50px;
+            border: 3px solid transparent;
+            border-top-color: $tertiary;
+            -webkit-animation: spin 5s linear  infinite;
+                    animation: spin 5s linear  infinite;
+    
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@-webkit-keyframes loading{
+    0% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        z-index: -1;
+    }
+
+}
+
+
+
+
+@keyframes loading{
+    0% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        z-index: -1;
+    }
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+
+    &img {
+        width: 50%;
+        max-width:150%;
+    }
+
+}
+
+h1{
+    text-align: center;
+
+}
+
+h2{
+
+    font-family: "Shrikhand" , cursive;
+}
+
+h4{
+
+margin-left: 10px;
+
+}
+
+.location{
+
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-weight: bold;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) inset;
+    background-color: #F3F3F3;
+
+}
+
+button{
+
+    text-align: center;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    
+
+    &.submit{
+
+        background: $button-color;
+        color: #FFFFFF;
+        font-size: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.30);
+        border-radius: 30px;
+        transform: scale(1);
+        transition: .3s;
+    }
+    &:hover{
+        box-shadow: 0 3px 8px rgba(0,0,0,0.50);
+        -webkit-filter: brightness(1.1);
+                filter: brightness(1.1);
+        transform: scale(1.1);
+    }
+}
+
+.explore-restaurant{
+
+    text-align: center;
+    padding: 20px 20px 50px 20px;
+    background-color: #F7F7F7;
+
+    & p{
+        font-weight: 300;
+    }
+
+}
+
+.steps-container{
+
+    padding: 20px;
+
+    
+
+    & ol{
+        
+        list-style-type: none;
+        padding: 0;
+        
+    }
+
+    & li{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0px 15px 20px 15px;
+        padding: 20px 40px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+        border-radius: 25px;
+        width: auto;
+        
+
+        &:hover {
+            background-color: #f4eefb;
+        }
+        &:hover .fas {
+            color: $primary;
+             
+        }
+
+        
+
+        
+    
+
+        & a{
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            & .fas {
+                color: rgba(0, 0, 0, 0.5);   
+                margin-right: 20px;
+            
+
+            }
+        }
+
+        & .number{
+
+            background-color: $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 25px;
+            border-radius: 100%;
+            color: #FFFFFF;
+            position: absolute;
+            left: -10px;
+            top: 25px;
+
+        }
+    }
+}
+
+.heart{
+    background: inherit;
+    position: relative;
+    height: 32px;
+    width: 32px;
+
+    & .far {
+        top: 0;
+        left: 0;
+        position: absolute;
+        opacity: 1;
+        transition: opacity .5s;
+        padding: 1px;
+
+        
+    }
+
+    &:hover .far{
+        opacity: 0;
+    }
+    
+    & .fas {
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .5s;
+        background: $button-color ;  
+        // webkit
+        -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 1px;
+        
+
+       
+
+        
+    }
+    &:hover .fas{
+        opacity: 1;
+    }
+   
+       
+}
+
+*{ 
+    box-sizing: border-box;
+}
+
+//choix du restaurant
+
+
+
+.restaurants{
+    background-color: #F7F7F7;
+    padding: 50px 20px;
+    
+    
+
+    & .restaurants-container{
+
+        width: auto;
+
+        & .cards{
+
+            width: auto;
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+
+            & .card{
+                width: 100%;
+                height: 275px;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+                padding-bottom: 15px;
+                margin: 15px;
+                transform: scale(1);
+                transition-duration: .3s;
+                
+                &:hover{
+                    transform: scale(1.05);
+                    
+                }
+                
+
+                & .card-image{
+                    height: 70%;
+                    width:auto;
+                    position: relative;
+
+                    & img{
+                        border-radius: 15px 15px 0px 0px;
+                        height: 100%;
+                        width: 100%;
+                        -o-object-fit: cover;
+                           object-fit: cover;
+                    }
+
+                    & .badge{
+                        background-color: $tertiary;
+                        color: #248f74;
+                        font-weight: bold;
+                        border-radius: 2px;
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        padding: 6px;
+
+                    }
+                }
+
+                & .card-legend{
+                
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 15px 0px 15px;
+
+                    & .details{
+
+                        
+                   
+                        & .title{
+                            font-weight: bold;
+                            margin-bottom: 0;
+                        }
+
+                        & .subtitle{
+                            font-weight: 300;
+                            margin-top: 0px;
+                        }  
+
+                    }
+                  
+                }
+
+            }
+        }
+    
+    }
+}
+
+    
+//autres pages
+
+body{
+
+    & header{
+
+        
+
+        & a{
+            display: flex;
+            
+            & .header-arrow{
+                position: absolute;
+                top: 30px;
+                margin-left: 20px;
+                font-size: 20px;
+            }
+            
+        }
+
+    }
+    
+    
+    
+}
+.cover{
+    & img{
+    width: 100%;
+    max-height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    }
+}
+
+
+@-webkit-keyframes appear{
+
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes appear{
+
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+//la palette du goût
+
+
+.menu{
+
+    background-color: #F3F3F3;
+    position: relative;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: -55px;
+    z-index: 5;
+    padding: 20px;
+    
+    
+
+    & .name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & i{
+            
+            margin-right: 15px;
+        }
+    }
+
+    & .menu-container{
+        & h3{
+            color: black;
+            font-weight: 300;
+            position: relative;
+            padding-bottom: 20px;
+            &::after{
+                content: " ";
+                width: 45px;
+                height: 4px;
+                position: absolute;
+                background-color: $tertiary;
+                left: 0;
+                bottom: 10px;
+            }
+            
+            
+        }
+
+        & .menu-details{
+
+            max-width: 100%;
+            overflow: hidden;
+            flex-wrap: wrap;
+            
+
+            & .card{
+
+                width: auto;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 15px;
+                padding: 10px;
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+                background-color: white;
+                overflow: hidden;
+                cursor: pointer;
+                -webkit-animation: appear .6s;
+                        animation: appear .6s;
+                -webkit-animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+                        animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+                -webkit-animation-fill-mode: both;
+                        animation-fill-mode: both;
+                transform: scale(0);
+                max-width: 100%;
+                
+
+                & .composition-text{
+                    
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    
+                    
+
+
+                    & .title{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 14px ;
+                        margin: 0;
+                        
+                    }
+                    & .description{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-weight: 300;
+                        font-size: 14px;
+                        margin: 0%;
+                    }
+                    
+                }
+
+                & .checkprice{
+                    display: flex;
+                    align-items: center;
+
+                    & .price{
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        padding-left: 0.5rem;
+                        transition-duration: 0.4s;
+                        margin-right: 50px;
+                    }
+
+                    &:hover .check {
+                        visibility: visible;
+                        width: 4rem;
+                        
+
+                        & i{
+                            
+                            transform: rotate(0);
+                        }
+                    }
+                    
+                    
+                    & .check{
+                        background-color: $tertiary;
+                        color: white;
+                        margin: -10px;
+                        padding: 20px 0px 20px 0px;
+                        width:0;
+                        visibility: hidden;
+                        
+                        transition-duration: .3s;
+                        transition-delay: .1s;
+                        font-size: 1.5rem;
+                        display: flex;
+                        justify-content: center;
+                        
+
+                        & i{
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                        }
+                        
+                        
+                    }
+                }
+
+              
+                    
+                
+            }
+            
+            
+            .delay0{
+                -webkit-animation-delay: .1s;
+                        animation-delay: .1s;
+            }
+
+            .delay1{
+                -webkit-animation-delay: .3s;
+                        animation-delay: .3s;
+            }
+
+            .delay2{
+                -webkit-animation-delay: .5s;
+                        animation-delay: .5s;
+            }
+        }
+    }
+}
+
+.button{
+    text-align: center;
+    margin: 50px;
+}
+        
+
+
+
+
+
+
+
+//footer
+
+footer{
+
+
+    color: #FFFFFF;
+    background-color: #353535;
+    padding: 20px;
+    text-align: start;
+    
+    
+    
+   & img{
+       width: 160px;
+       margin-left: 35px;   
+    }
+
+    & ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        
+    }
+
+    & li a {
+
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+   
+        & i { 
+            margin-right: 10px;
+        }
+        
+        & p {
+
+            margin: 0;
+            
+        
+            
+        }
+     
+     
+    }
+ 
+
+
+}
+
+
+
+
+//Responsive
+
+@media (min-width: 900px) {
+
+    //Accueil
+
+    .steps-container {
+
+
+        
+
+        & ol{
+        display: flex;
+        justify-content: space-around;
+        
+        }
+
+        & li{
+            width: 33%; 
+        }
+
+
+    }
+    
+
+
+    .restaurants{
+
+        .restaurants-container{ 
+
+            .cards{
+                
+                & .card{
+                    transition-duration: .4s;
+                    width: 47%;
+                    margin: 0px;
+                    margin-bottom: 20px;
+                    
+
+                }
+                
+            }
+        }
+    }
+    
+
+    
+
+
+
+
+
+
+    footer {
+        
+        text-align: center;
+        
+        & img{
+            margin-left: 0px;
+        }
+
+        & ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row ;
+            
+        }
+    }
+
+    
+
+
+
+
+}
+
+
+@media (min-width:1200px){
+
+
+    //la palette du goût
+
+
+
+    .cover{
+        max-height: 800p;
+    }
+    .menu{
+
+        margin-top: -100px;
+        margin-right: 10%;
+        margin-left: 10%;
+
+        & .menu-container{
+                
+            & .menu-details{
+                display: flex;
+                justify-content: space-between;
+                    
+
+                & .card{
+                        
+                    width: 30%;
+                        
+                    & .check{
+                        
+                        margin: -10px;
+ 
+                        & i{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+
+                    
+                    
+
+            }
+        }
+    }
+
+
+}
