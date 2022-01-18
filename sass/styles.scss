@@ -47,7 +47,7 @@ body{
     }
 }
 
-.section{
+.spinner{
     background-color: rgba(255, 255, 255, 0.9);
     height: auto;
     width: auto;
@@ -61,19 +61,7 @@ body{
     z-index: 1;
     -webkit-animation: loading 3s forwards;
             animation: loading 3s forwards;
-    
-    
 
-    
-    // & .load1{
-    //     color: $primary;
-    // }
-    // & .load2{
-    //     color: $secondary;
-    // }
-    // & .load3{
-    //     color: $tertiary;
-    // }
     
 
     & .loader{
